@@ -1,0 +1,17 @@
+
+Fsquid:S1148Z"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8λ‡ƒνπ-
+[
+squid:S106:"9Replace this use of System.out or System.err by a logger.(†ήΩώÿÿÿÿ8γόγμπ-
+osquid:S2095"QUse try-with-resources or close this "ServerSocketChannel" in a "finally" clause.(ÒΜΊΡ8―ÒΖμπ-
+V
+squid:S106&"9Replace this use of System.out or System.err by a logger.(σΆΐ—8άώΫμπ-
+[
+squid:S106#"9Replace this use of System.out or System.err by a logger.(£®ψΞψÿÿÿÿ8ΥΩμπ-
+V
+squid:S106H"9Replace this use of System.out or System.err by a logger.(Òξή8€ηςμπ-
+[
+squid:S106O"9Replace this use of System.out or System.err by a logger.(¶©²ÿÿÿÿÿ8κ±ωμπ-
+Fsquid:S1148_"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8γΜƒνπ-
+Isquid:S1481%"+Remove this unused "select" local variable.(ΎΡ¬Ξ8―ΏΦμπ-
+Fsquid:S1148D"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8αΙιμπ-
+Fsquid:S11484"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8Α¦Ζμπ-

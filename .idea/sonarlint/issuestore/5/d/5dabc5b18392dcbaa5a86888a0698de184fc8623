@@ -1,0 +1,6 @@
+
+Fsquid:S11486"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ù¸Üïð-
+isquid:S2095"KUse try-with-resources or close this "SocketChannel" in a "finally" clause.(½»á³8›†ßïð-
+Isquid:S1481("+Remove this unused "select" local variable.(¾Ñ¬Î8¢ÿõïð-
+V
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(„çäÞ8‹ä¥ðð-

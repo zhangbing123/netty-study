@@ -1,0 +1,12 @@
+
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ΰ—Ρÿÿÿÿÿ8Αμπ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ίÿίωÿÿÿÿ8Αμπ-
+Msquid:S2093"*Change this "try" to a try-with-resources.(΅»Άόωÿÿÿÿ8Ί³™μπ-
+Fsquid:S1148!"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8Χ–‘μπ-
+hsquid:S2674"JCheck the return value of the "read" call to see how many bytes were read.(δΤµό8Αμπ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(…αÒγ8Αμπ-
+Fsquid:S1148&"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8–ÿμπ-
+gsquid:S2259$"DA "NullPointerException" could be thrown; "socket" is nullable here.(Ϋζ•ψϋÿÿÿÿ8–ÿμπ-
