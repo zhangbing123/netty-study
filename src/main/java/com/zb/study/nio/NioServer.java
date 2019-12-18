@@ -8,6 +8,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
+import java.util.Set;
 
 /**
  * @description: NIO模型服务端
@@ -28,7 +29,8 @@ public class NioServer {
             //开启一个选择器Selector
             Selector selector = Selector.open();
             //注册通道到选择器，并监听accept事件
-            socketChannel.register(selector, SelectionKey.OP_ACCEPT);
+            SelectionKey register = socketChannel.register(selector, SelectionKey.OP_ACCEPT);
+            System.out.println("注册的accept事件：selector："+selector+",SelectionKey："+register+",注册时间："+System.currentTimeMillis());
 
             //一直循环 进行处理客户端的连接和请求
             while(true){
@@ -44,6 +46,7 @@ public class NioServer {
                     iterator.remove();
                     handle(key);
                 }
+
 
             }
 
@@ -63,7 +66,8 @@ public class NioServer {
                 //配置非阻塞
                 socketChannel.configureBlocking(false);
                 //监听read事件，一旦本次连接的客户端发数据过来 就会触发此事件
-                socketChannel.register(key.selector(),SelectionKey.OP_READ);
+                SelectionKey register = socketChannel.register(key.selector(), SelectionKey.OP_READ);
+                System.out.println("注册的read事件：selector："+key.selector()+",SelectionKey："+register+",注册时间："+System.currentTimeMillis());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -74,6 +78,7 @@ public class NioServer {
             ByteBuffer buffer = ByteBuffer.allocate(1024);
             buffer.clear();
             try {
+                System.out.println("服务端读取数据：selector"+key.selector()+",key:"+key+",注册时间："+System.currentTimeMillis());
                 int read = channel.read(buffer);
                 if (read!=-1){
                     System.out.println("客户端数据读取完毕:"+new String(buffer.array()));
