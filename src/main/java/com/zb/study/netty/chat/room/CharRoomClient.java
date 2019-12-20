@@ -11,7 +11,8 @@ public class CharRoomClient {
 
     public static void main(String[] args){
 //        String clientName = "张三";
-        String clientName = "李四";
+//        String clientName = "李四";
+        String clientName = "王五";
         NettyClientStarter starter = new NettyClientStarter("localhost", 9003, clientName);
         starter.handler(new ChatRoomClientHandler()).start();
     }

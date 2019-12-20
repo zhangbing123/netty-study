@@ -1,5 +1,6 @@
 package com.zb.study.netty.chat.room;
 
+import com.sun.xml.internal.ws.util.StringUtils;
 import com.zb.study.netty.common.ChatMssage;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
@@ -73,22 +74,43 @@ public class ChatRoomServerHandler extends SimpleChannelInboundHandler<ChatMssag
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, ChatMssage chatMssage) throws Exception {
         Channel inComing = channelHandlerContext.channel();
         String clientName = chatMssage.getClientName();
+        String friend = chatMssage.getFriend();
         StringBuilder msg = new StringBuilder(chatMssage.getMsg());
         System.out.println(clientName+":"+msg);
 
+        boolean toOne = friend!=null && friend!="";
+
+
+        int count = 0;
         for (Channel channel : channels) {
+            System.out.println(channel.remoteAddress().toString());
             chatMssage = new ChatMssage(clientName);
-            if (channel != inComing) {
-                String s = "["+clientName+"]:" + msg + "\n";
-                chatMssage.setMsg(s);
-                System.out.println("发送给别人"+chatMssage.getMsg());
-                channel.writeAndFlush(chatMssage);
-            } else {
+            if (toOne){
+                //单对单
+                if (channel.remoteAddress().toString().equals(friend)){
+                    String s = "["+clientName+"]:" + msg + "\n";
+                    chatMssage.setMsg(s);
+                    System.out.println("发送给别人"+chatMssage.getMsg());
+                    channel.writeAndFlush(chatMssage);
+                    count++;
+                }
+            }else {
+                //群聊
+                if (channel != inComing) {
+                    String s = "["+clientName+"]:" + msg + "\n";
+                    chatMssage.setMsg(s);
+                    System.out.println("发送给别人"+chatMssage.getMsg());
+                    channel.writeAndFlush(chatMssage);
+                }
+            }
+
+            if (channel == inComing) {
                 String s = "[自己]:" + msg + "\n";
                 chatMssage.setMsg(s);
                 System.out.println("发送给自己"+chatMssage.getMsg());
                 inComing.writeAndFlush(chatMssage);
             }
+            if (count==2) break;
         }
     }
 }

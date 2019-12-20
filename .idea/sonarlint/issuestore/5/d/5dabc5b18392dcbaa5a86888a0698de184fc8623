@@ -1,15 +1,15 @@
 
 V
-squid:S106a"9Replace this use of System.out or System.err by a logger.(„çäÞ8‹ä¥ðð-
+squid:S106L"9Replace this use of System.out or System.err by a logger.(‹„‰³8©ÈÙ¸ñ-
+Fsquid:S1148;"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ù¸Üïð-
 isquid:S2095"KUse try-with-resources or close this "SocketChannel" in a "finally" clause.(½»á³8›†ßïð-
 V
-squid:S106L"9Replace this use of System.out or System.err by a logger.(‹„‰³8©ÈÙ¸ñ-
-Zsquid:UselessImportCheck
-"*Remove this unused import 'java.util.Set'.(ö²„¤þÿÿÿÿ8Ú½¾¸ñ-
-Isquid:S1481)"+Remove this unused "select" local variable.(¾Ñ¬Î8¢ÿõïð-
+squid:S106\"9Replace this use of System.out or System.err by a logger.(‡ôóý8Éš…¹ñ-
 [
 squid:S106""9Replace this use of System.out or System.err by a logger.(·²º™ûÿÿÿÿ8ð˜Ø¸ñ-
+Zsquid:UselessImportCheck
+"*Remove this unused import 'java.util.Set'.(ö²„¤þÿÿÿÿ8Ú½¾¸ñ-
 tsquid:S1192""QDefine a constant instead of duplicating this literal ",æ³¨å†Œæ—¶é—´ï¼š" 3 times.(·²º™ûÿÿÿÿ8•™‰¹ñ-
+Isquid:S1481)"+Remove this unused "select" local variable.(¾Ñ¬Î8¢ÿõïð-
 V
-squid:S106\"9Replace this use of System.out or System.err by a logger.(‡ôóý8Éš…¹ñ-
-Fsquid:S1148;"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ù¸Üïð-
+squid:S106a"9Replace this use of System.out or System.err by a logger.(„çäÞ8‹ä¥ðð-

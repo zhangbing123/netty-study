@@ -22,6 +22,7 @@ public class NettyClientStarter {
     private String host;
     private int port;
     private String clientName;
+    private String friendName;
 
     private ChannelHandler handler = new NettyClientHandler();
 
@@ -33,6 +34,11 @@ public class NettyClientStarter {
 
     public NettyClientStarter handler(ChannelHandler handler){
         this.handler = handler;
+        return this;
+    }
+
+    public NettyClientStarter friend(String friendName){
+        this.friendName = friendName;
         return this;
     }
 
@@ -63,7 +69,7 @@ public class NettyClientStarter {
             //启动客户端去连接服务端
             ChannelFuture future = bootstrap.connect(host, port).sync();
             Channel channel = future.channel();
-            System.out.println("localhost:"+channel.localAddress());
+            System.out.println("localhost:"+channel.localAddress().toString());
             Scanner scanner = new Scanner(System.in);
             ChatMssage chatMssage = null;
             while (scanner.hasNextLine()){
@@ -71,8 +77,13 @@ public class NettyClientStarter {
                 if (s.equals("quit")){
                     System.exit(1);
                 }
-                chatMssage = new ChatMssage(clientName,s);
-                channel.writeAndFlush(chatMssage);
+                if (s.startsWith("TO")){
+                    String substring = s.substring(2);
+                    friendName = substring;
+                }else {
+                    chatMssage = new ChatMssage(clientName,s,friendName);
+                    channel.writeAndFlush(chatMssage);
+                }
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

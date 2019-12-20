@@ -15,6 +15,8 @@ public class ChatMssage implements Serializable {
 
     private String msg;
 
+    private String friend;
+
     public ChatMssage(String clientName) {
         this.clientName = clientName;
     }
@@ -22,6 +24,12 @@ public class ChatMssage implements Serializable {
     public ChatMssage(String clientName, String msg) {
         this.clientName = clientName;
         this.msg = msg;
+    }
+
+    public ChatMssage(String clientName, String msg, String friend) {
+        this.clientName = clientName;
+        this.msg = msg;
+        this.friend = friend;
     }
 
     public String getClientName() {
@@ -38,6 +46,14 @@ public class ChatMssage implements Serializable {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public String getFriend() {
+        return friend;
+    }
+
+    public void setFriend(String friend) {
+        this.friend = friend;
     }
 
     @Override
