@@ -7,8 +7,6 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
 
 /**
  * @description: netty 服务端启动对象
@@ -24,7 +22,7 @@ public class NettyServerStarter {
         this.port = port;
     }
 
-    public NettyServerStarter handler(ChannelHandler handler){
+    public NettyServerStarter handler(ChannelHandler handler) {
         this.handler = handler;
         return this;
     }
@@ -39,7 +37,7 @@ public class NettyServerStarter {
         //创建两个线程组 bossGroup和workGroup,线程的个数默认为cup核数的两倍
 
         //创建bossGroup 负责处理客户端的连接请求
-        EventLoopGroup bossGroup = new NioEventLoopGroup();
+        EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         //创建workGroup 负责处理客户端的数据请求
         EventLoopGroup workGroup = new NioEventLoopGroup();
 
@@ -57,7 +55,7 @@ public class NettyServerStarter {
                     @Override
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
                         socketChannel.pipeline().addLast("decoder", MarshallingCodeCFactory.buildMarshallingDecoder());
-                        socketChannel.pipeline().addLast("encoder",MarshallingCodeCFactory.buildMarshallingEncoder());
+                        socketChannel.pipeline().addLast("encoder", MarshallingCodeCFactory.buildMarshallingEncoder());
                         socketChannel.pipeline().addLast(handler);//对workerGroup的SocketChannel设置处理器
                     }
                 });
