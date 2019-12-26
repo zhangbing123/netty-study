@@ -2,7 +2,7 @@ package com.zb.study.netty.starter;
 
 import com.zb.study.netty.common.ChatMssage;
 import com.zb.study.netty.common.MarshallingCodeCFactory;
-import com.zb.study.netty.source.NettyClientHandler;
+import com.zb.study.netty.base.NettyClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

@@ -1,4 +1,4 @@
-package com.zb.study.netty.source;
+package com.zb.study.netty.base;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
