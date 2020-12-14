@@ -54,6 +54,7 @@ public class NettyServerStarter {
                 .childHandler(new ChannelInitializer<SocketChannel>() {//创建通道初始化对象，设置初始化参数
                     @Override
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
+                        //添加双向队列的尾部
                         socketChannel.pipeline().addLast("decoder", MarshallingCodeCFactory.buildMarshallingDecoder());
                         socketChannel.pipeline().addLast("encoder", MarshallingCodeCFactory.buildMarshallingEncoder());
                         socketChannel.pipeline().addLast(handler);//对workerGroup的SocketChannel设置处理器

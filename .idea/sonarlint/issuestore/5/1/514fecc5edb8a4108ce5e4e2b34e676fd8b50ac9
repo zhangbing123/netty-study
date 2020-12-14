@@ -1,15 +1,4 @@
 
-Fsquid:S1148("#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8Λ„Υλπ-
-Fsquid:S1148H"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¨›τλπ-
-V
-squid:S1062"9Replace this use of System.out or System.err by a logger.(ΫΩ½¤8ώάιλπ-
-V
-squid:S106!"9Replace this use of System.out or System.err by a logger.(Δ—ε8Ν›αλπ-
-hsquid:S2095"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(²·Δ¨8τªΐλπ-
-U
-squid:S106"9Replace this use of System.out or System.err by a logger.(§νµ-8ΦΞίλπ-
-V
-squid:S106-"9Replace this use of System.out or System.err by a logger.(•Σ“8²Υδλπ-
-V
-squid:S1069"9Replace this use of System.out or System.err by a logger.(ς£“δ8‚Βφλπ-
 Fsquid:S1148C"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8οςλπ-
+Fsquid:S1148H"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¨›τλπ-
+Fsquid:S1148("#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8Λ„Υλπ-

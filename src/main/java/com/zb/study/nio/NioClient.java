@@ -24,7 +24,7 @@ public class NioClient {
             //设置通道为非阻塞的
             channel.configureBlocking(false);
             // 客户端连接服务器,其实方法执行并没有实现连接，需要在listen（）方法中调
-            //用channel.finishConnect();才能完成连接
+            //用channel.finishConnect();才能完成连接  这个方法执行完  服务端就接受到请求了
             channel.connect(new InetSocketAddress("localhost",9002));
 
             //开启一个选择器(多路复用器)
@@ -96,6 +96,11 @@ public class NioClient {
         if(len != -1){
             System.out.println("客户端收到信息："+ new String(buffer.array(),0, len));
         }
+
+        ByteBuffer bufferWrite = ByteBuffer.wrap("我收到消息了".getBytes());
+        channel.write(bufferWrite);
+
+
     }
 
 
