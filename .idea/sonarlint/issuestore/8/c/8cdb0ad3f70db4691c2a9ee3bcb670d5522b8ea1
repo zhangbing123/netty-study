@@ -1,25 +1,8 @@
 
-[
-squid:S106T"9Replace this use of System.out or System.err by a logger.(¶©²ÿÿÿÿÿ8ê±ùìğ-
-V
-squid:S106L"9Replace this use of System.out or System.err by a logger.(ÒŒîŞ8€çòìğ-
-V
-squid:S106Q"9Replace this use of System.out or System.err by a logger.(©èù÷8ëˆ¹ñ-
-Isquid:S1481'"+Remove this unused "select" local variable.(¾Ñ¬Î8¯¿Öìğ-
-[
-squid:S106F"9Replace this use of System.out or System.err by a logger.(Î Ãùÿÿÿÿ8ï‹×¸ñ-
 Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8¦“Î·ñ-
-Fsquid:S1148_"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ë‡ƒíğ-
-V
-squid:S106("9Replace this use of System.out or System.err by a logger.(ó¢À—8ÜşÛìğ-
-tsquid:S1192!"QDefine a constant instead of duplicating this literal ",æ³¨å†Œæ—¶é—´ï¼š" 3 times.(©Ã¥¸ÿÿÿÿÿ8ß‰¹ñ-
-Fsquid:S1148d"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ãÌƒíğ-
-osquid:S2095"QUse try-with-resources or close this "ServerSocketChannel" in a "finally" clause.(ÒÌºÑ8¯ÒÆìğ-
-[
-squid:S106!"9Replace this use of System.out or System.err by a logger.(©Ã¥¸ÿÿÿÿÿ8¾¤Ó¸ñ-
-[
-squid:S106%"9Replace this use of System.out or System.err by a logger.(£®øÎøÿÿÿÿ8ÕœÙìğ-
-[
-squid:S106="9Replace this use of System.out or System.err by a logger.(†ŞÙşÿÿÿÿ8ãüãìğ-
 Fsquid:S1148H"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8áÉéìğ-
 Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Á¦Æìğ-
+Isquid:S1481'"+Remove this unused "select" local variable.(¾Ñ¬Î8¯¿Öìğ-
+Fsquid:S1148_"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ë‡ƒíğ-
+Fsquid:S1148d"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÿ¤í÷å.
+tsquid:S1192!"QDefine a constant instead of duplicating this literal ",æ³¨å†Œæ—¶é—´ï¼š" 3 times.(©Ã¥¸ÿÿÿÿÿ8ß‰¹ñ-
