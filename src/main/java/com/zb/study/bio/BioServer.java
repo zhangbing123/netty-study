@@ -42,7 +42,7 @@ public class BioServer {
     }
 
     private static void handle(Socket socket){
-        System.out.println("当前线程ID："+ Thread.currentThread().getId());
+        System.out.println("当前线程ID："+ Thread.currentThread().getName());
 
         //字节数组 用来保存客户端发来的数据
         byte[] bytes = new byte[1024];
@@ -52,6 +52,12 @@ public class BioServer {
         try {
             //读取客户端发来的数据，没有数据可读 就阻塞
             int read = socket.getInputStream().read(bytes);
+
+            try {
+                Thread.currentThread().sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
             if (read != -1){
                 System.out.println("客户端数据读取完毕:"+new String(bytes));

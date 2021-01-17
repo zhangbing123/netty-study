@@ -25,7 +25,7 @@ public class NioClient {
             channel.configureBlocking(false);
             // 客户端连接服务器,其实方法执行并没有实现连接，需要在listen（）方法中调
             //用channel.finishConnect();才能完成连接
-            channel.connect(new InetSocketAddress("localhost",9002));
+            channel.connect(new InetSocketAddress("localhost",9000));
 
             //开启一个选择器(多路复用器)
             Selector selector = Selector.open();
